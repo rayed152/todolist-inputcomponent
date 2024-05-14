@@ -49,16 +49,3 @@ export const Primary: Story = {
     type: "email",
   },
 };
-
-// Additional stories can be added if needed
-// export const Secondary: Story = {
-//   args: {
-//     value: '',
-//     placeholder: 'Enter your name',
-//     hint: 'This is a required field.',
-//     labelName: 'Name',
-//     disabled: false,
-//     roundedStyle: 'rounded-full',
-//     type: 'text',
-//   },
-// };
