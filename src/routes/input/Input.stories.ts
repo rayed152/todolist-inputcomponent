@@ -29,7 +29,7 @@ const meta: Meta<InputProps> = {
     disabled: { control: "boolean" },
     backgroundColor: {
       control: "select",
-      options: ["bg-green-400", "bg-red-200"],
+      options: ["bg-green-400", "bg-red-200", "bg-white"],
     },
     roundedStyle: {
       control: "select",
