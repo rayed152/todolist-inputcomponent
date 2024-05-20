@@ -16,11 +16,10 @@
     placeholder={placeholder} 
     hint={"This is a hint"} 
     roundedStyle="rounded-lg"
+    backgroundColor="bg-white"
     >
     <img slot="leftAddon" src={email} alt="dasdsda"/>
-    <!-- <img slot="rightAddon" src={email} alt="dasdsda"/> -->
+    <img slot="rightAddon" src={email} alt="dasdsda"/>
   </Input>
   </div>
-  
-
   

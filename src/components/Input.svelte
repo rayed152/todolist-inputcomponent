@@ -1,6 +1,5 @@
 <!-- Input.svelte -->
 <script lang="ts">
-  import { createEventDispatcher } from "svelte";
 
   export let value: string;
   export let placeholder: string;
@@ -10,6 +9,7 @@
   export let disabled: boolean = false; 
   export let roundedStyle: string = 'rounded';
   export let type: any = 'email';
+  export let backgroundColor: string = "";
   
 
   //  // Function to validate email format
@@ -21,7 +21,8 @@
 
 </script>
 
-<div class="relative ">
+<div class=" 
+relative ">
  
   {#if labelName}
     <div>
@@ -44,6 +45,7 @@
           placeholder={placeholder} 
           class= "
           {roundedStyle}  
+          {backgroundColor}
            px-4 py-2  border border-gray-300 focus:border-blue-500 focus:outline-none {$$slots.leftAddon && "pl-10" } {$$slots.rightAddon ? "pr-10" : " "} "  
           {disabled}
       />
@@ -56,3 +58,5 @@
     <p class="mt-1 text-xs text-red-500">{error}</p>
   {/if} -->
 </div>
+
+

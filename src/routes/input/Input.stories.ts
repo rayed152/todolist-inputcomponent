@@ -10,6 +10,9 @@ type InputProps = {
   disabled?: boolean;
   roundedStyle?: string;
   type?: string;
+  leftAddon?: string;
+  rightAddon?: string;
+  backgroundColor?: string;
 };
 
 // Define the Meta type with InputProps
@@ -23,9 +26,19 @@ const meta: Meta<InputProps> = {
     hint: { control: "text" },
     labelName: { control: "text" },
     disabled: { control: "boolean" },
+    backgroundColor: {
+      control: "select",
+      options: ["bg-green-400", "bg-red-200"],
+    },
     roundedStyle: {
       control: "select",
-      options: ["rounded", "rounded-full", "rounded-none"],
+      options: [
+        "rounded",
+        "rounded-full",
+        "rounded-none",
+        "rounded-2xl",
+        "rounded-3xl",
+      ],
     },
     type: {
       control: "select",
@@ -37,15 +50,26 @@ const meta: Meta<InputProps> = {
 export default meta;
 type Story = StoryObj<InputProps>;
 
-// Primary story for the Input component
-export const Primary: Story = {
+export const Email: Story = {
   args: {
     value: "",
-    placeholder: "Enter your email",
+    placeholder: "Enter your Email",
     hint: "We will never share your email.",
     labelName: "Email",
     disabled: false,
-    roundedStyle: "rounded",
+    roundedStyle: "rounded-3xl",
     type: "email",
+  },
+};
+
+export const Password: Story = {
+  args: {
+    value: "",
+    placeholder: "Enter your Password",
+    hint: "We will never share your password.",
+    labelName: "Password",
+    disabled: false,
+    roundedStyle: "rounded-2xl",
+    type: "password",
   },
 };
