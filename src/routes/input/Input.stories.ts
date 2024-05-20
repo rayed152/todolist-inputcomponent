@@ -13,6 +13,7 @@ type InputProps = {
   leftAddon?: string;
   rightAddon?: string;
   backgroundColor?: string;
+  slot?: string;
 };
 
 // Define the Meta type with InputProps
@@ -59,6 +60,7 @@ export const Email: Story = {
     disabled: false,
     roundedStyle: "rounded-3xl",
     type: "email",
+    backgroundColor: "bg-white",
   },
 };
 
@@ -71,5 +73,6 @@ export const Password: Story = {
     disabled: false,
     roundedStyle: "rounded-2xl",
     type: "password",
+    backgroundColor: "bg-white",
   },
 };

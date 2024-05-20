@@ -1,5 +1,5 @@
 // .storybook/main.js or .storybook/main.ts
-
+const path = require("path");
 module.exports = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
@@ -12,7 +12,14 @@ module.exports = {
     name: "@storybook/sveltekit",
     options: {},
   },
-  docs: {
-    autodocs: "tag",
+  core: {
+    builder: "@storybook/builder-vite",
+  },
+  viteFinal: (config, { configType }) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@lib": path.resolve(__dirname, "../src/lib"),
+    };
+    return config;
   },
 };

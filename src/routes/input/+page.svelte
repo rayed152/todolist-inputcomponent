@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { createEventDispatcher } from 'svelte';
     import Input from '../../components/Input.svelte';
     import email from "$lib/assets/email.png";
     let inputValue = '';
